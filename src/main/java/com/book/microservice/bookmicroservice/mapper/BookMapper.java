@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 @Component
@@ -51,5 +52,12 @@ public class BookMapper {
             dto.add(toDto(current)) ;
         }
         return dto;
+    }
+
+    /**
+     * @return a BookDto from an Optional<Book>
+     */
+    public BookDto optionalToDto(Optional<Book> optional) {
+        return toDto(optional.orElse(null));
     }
 }
