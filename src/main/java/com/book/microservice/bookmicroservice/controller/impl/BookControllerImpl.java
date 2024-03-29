@@ -2,6 +2,7 @@ package com.book.microservice.bookmicroservice.controller.impl;
 
 import com.book.microservice.bookmicroservice.controller.BookController;
 import com.book.microservice.bookmicroservice.model.BookDto;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -11,12 +12,26 @@ import java.util.List;
 public class BookControllerImpl implements BookController {
 
     @Override
-    public List<BookDto> getAllCarRide() {
-        List<BookDto> bookDtos = new ArrayList<>();
-        BookDto dto = new BookDto();
-        dto.setTitle("Prova");
-        bookDtos.add(dto);
+    public ResponseEntity<List<BookDto>> getAllBooks() {
+        return null;
+    }
 
-        return bookDtos;
+    @Override
+    public ResponseEntity<BookDto> getBookById(Long bookId) {
+        return null;
+    }
+
+    @Override
+    public ResponseEntity<BookDto> insertBook(BookDto bookDto) {
+        return null;
+    }
+
+    @Override
+    public ResponseEntity<BookDto> updateBook(BookDto bookDto) {
+        return null;
+    }
+
+    @Override
+    public void deleteBook(Long bookId) {
     }
 }

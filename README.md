@@ -1,4 +1,8 @@
-# bookstore
+# Bookstore
 online bookstore simple project
 
 1 - Il Master viene lasciato in uno stato iniziale per vitare EVENTUALI build di pipeline ad ogni aggiornamento. Le features richieste vengono sviluppate in un ramo di questo.
+
+2 - Si potrebbe considerare la creazione di schema dedicati ad ogni microservizio di modo da non interferire negli sviluppi di altri colleghi
+
+3 - Considerare l'utilizzo di controlli di validazione offerti direttamente da springframework
