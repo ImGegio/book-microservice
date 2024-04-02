@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController("/book")
@@ -23,9 +22,8 @@ public class BookControllerImpl implements BookController {
         return new ResponseEntity<>(bookService.getAllBooks(), HttpStatus.OK);
     }
 
-    @Override
-    public ResponseEntity<BookDto> getBookById(Long bookId) {
-        return new ResponseEntity<>(bookService.getBookById(bookId), HttpStatus.OK);
+    public ResponseEntity<BookDto> getBookByTitle(String title) {
+        return new ResponseEntity<>(bookService.getBookByTitle(title), HttpStatus.OK);
     }
 
     @Override

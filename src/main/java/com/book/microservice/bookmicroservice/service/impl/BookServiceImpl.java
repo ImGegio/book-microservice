@@ -30,14 +30,14 @@ public class BookServiceImpl implements BookService {
     }
 
     /**
-     * @param bookId of book to search
-     * @return book by id
+     * @param title of book to search
+     * @return book by title
      */
     @Override
-    public BookDto getBookById(Long bookId) {
-        Optional<Book> optional = bookRepository.findById(bookId);
+    public BookDto getBookByTitle(String title) {
+        Book book = bookRepository.findByTitle(title);
 
-        return bookMapper.optionalToDto(optional);
+        return bookMapper.toDto(book);
     }
 
     /**

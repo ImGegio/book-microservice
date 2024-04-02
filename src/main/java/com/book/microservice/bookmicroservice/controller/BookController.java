@@ -15,8 +15,9 @@ public interface BookController {
     @GetMapping(value = "/book-get-all", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<BookDto>> getAllBooks ();
 
-    @GetMapping(value = "/{bookId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<BookDto> getBookById(@PathVariable("bookId") Long bookId);
+    //A scopo puramente didattico, si potrebbe utilizzare @RequestParam
+    @GetMapping(value = "/{title}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<BookDto> getBookByTitle(@PathVariable("title") String title);
 
     @PostMapping(value = "/insert-book", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<BookDto> insertBook(@RequestBody BookDto bookDto);
