@@ -7,25 +7,24 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = DataSourceConstants.BOOK, schema = DataSourceConstants.SCHEMA )
-
-public class Book {
+@Table(name = DataSourceConstants.AUTHOR, schema = DataSourceConstants.SCHEMA )
+public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long bookId;
-    private String title;
-    private String type;
-    private LocalDate yearOfPublication;
-    private Integer stock;
+    private Long authorId;
+    private String name;
+    private String surname;
+    private String gender;
+    private LocalDate dateOfBirth;
 
-    @ManyToOne
-    Author author;
-
+    @OneToMany
+    private List<Book> books;
 
 }

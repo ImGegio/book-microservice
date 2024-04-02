@@ -11,3 +11,4 @@ online bookstore simple project
 
 5 - Mapper creato con BeanUtils, per esigenze piu' specifiche si consideri l'implementazione di Mapstruct
 
+6 - A scopo didattico si sta considerando una relazione 1-N da autori verso libri

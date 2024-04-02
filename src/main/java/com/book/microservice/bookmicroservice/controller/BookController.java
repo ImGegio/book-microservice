@@ -15,10 +15,11 @@ public interface BookController {
     @GetMapping(value = "/book-get-all", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<BookDto>> getAllBooks ();
 
-    //A scopo puramente didattico, si potrebbe utilizzare @RequestParam
+    //A scopo puramente didattico, si potrebbe utilizzare @RequestParam (sarebbe meglio in questo caso)
     @GetMapping(value = "/{title}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<BookDto> getBookByTitle(@PathVariable("title") String title);
 
+    //TODO al momento di un insert, se libro gia' presente, aumentare di 1 lo stock
     @PostMapping(value = "/insert-book", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<BookDto> insertBook(@RequestBody BookDto bookDto);
 
